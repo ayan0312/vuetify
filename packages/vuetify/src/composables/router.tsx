@@ -127,8 +127,6 @@ export function useBackButton (router: Router | undefined, cb: (next: Navigation
   }
 
   function onPopstate (e: PopStateEvent) {
-    if (e.state?.replaced) return
-
     popped = true
     setTimeout(() => (popped = false))
   }
